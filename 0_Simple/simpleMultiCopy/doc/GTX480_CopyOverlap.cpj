@@ -1,0 +1,13 @@
+<!DOCTYPE cpj>
+<cpj version="1.2" >
+ <session>
+  <name>Session1</name>
+  <cmdlineargs>--noprompt</cmdlineargs>
+  <datetime>05 Feb 2010 03:13:06</datetime>
+  <normalizedcounter>false</normalizedcounter>
+  <device multProcessorCount="15" warpSize="32" textureAlignment="512" maxRegPerBlock="32768" computeCapability="2.0" maxThreadPerBlock="1024" totalConstMem="65536" maxGridDim="65535 65535" maxShareMemPerBlock="49152" id="0" maxBlockDim="1024 1024 64" GpuOverlap="1" name="GeForce GTX 480" label="Device_0" clockFreq="810000" maxPitchMem="2147483647" >
+   <context totalcountercount="0" invalidcountercount="0" id="0" label="Context_0" truncatedcountercount="0" />
+  </device>
+ </session>
+</cpj>
+

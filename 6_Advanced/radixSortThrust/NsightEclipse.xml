@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+  <name>radixSortThrust</name>
+  <description><![CDATA[This sample demonstrates a very fast and efficient parallel radix sort uses Thrust library (http://code.google.com/p/thrust/). The included RadixSort class can sort either key-value pairs (with float or unsigned integer keys) or keys only.  The optimized code in this sample (and also in reduction and scan) uses a technique known as warp-synchronous programming, which relies on the fact that within a warp of threads running on a CUDA GPU, all threads execute instructions synchronously. The code uses this to avoid __syncthreads() when threads within a warp are sharing data via __shared__ memory. It is important to note that for this to work correctly without race conditions on all GPUs, the shared memory used in these warp-synchronous expressions must be declared volatile. If it is not declared volatile, then in the absence of __syncthreads(), the compiler is free to delay stores to __shared__ memory and keep the data in registers (an optimization technique), which will result in incorrect execution.  So please heed the use of volatile in these samples and use it in the same way in any code you derive from them.]]></description>
+  <devicecompilation>whole</devicecompilation>
+  <files>
+    <file>..\..\doc\Thrust_license.txt</file>
+    <file>readme.txt</file>
+  </files>
+  <includepaths>
+    <path>./</path>
+    <path>../</path>
+    <path>../../common/inc</path>
+  </includepaths>
+  <keyconcepts>
+    <concept level="advanced">Data-Parallel Algorithms</concept>
+    <concept level="advanced">Performance Strategies</concept>
+  </keyconcepts>
+  <keywords>
+    <keyword>GPGPU</keyword>
+    <keyword>Sorting</keyword>
+  </keywords>
+  <libraries>
+  </libraries>
+  <librarypaths>
+  </librarypaths>
+  <nsight_eclipse>true</nsight_eclipse>
+  <primary_file>radixSortThrust.cu</primary_file>
+  <scopes>
+    <scope>1:CUDA Advanced Topics</scope>
+    <scope>1:Data-Parallel Algorithms</scope>
+    <scope>1:Performance Strategies</scope>
+  </scopes>
+  <sm-arch>sm20</sm-arch>
+  <sm-arch>sm30</sm-arch>
+  <sm-arch>sm35</sm-arch>
+  <sm-arch>sm37</sm-arch>
+  <sm-arch>sm50</sm-arch>
+  <sm-arch>sm52</sm-arch>
+  <supported_envs>
+    <env>
+      <arch>x86_64</arch>
+      <platform>linux</platform>
+    </env>
+    <env>
+      <platform>windows7</platform>
+    </env>
+    <env>
+      <arch>x86_64</arch>
+      <platform>macosx</platform>
+    </env>
+    <env>
+      <arch>arm</arch>
+    </env>
+    <env>
+      <arch>ppc64le</arch>
+      <platform>linux</platform>
+    </env>
+  </supported_envs>
+  <supported_sm_architectures>
+    <include>all</include>
+  </supported_sm_architectures>
+  <title>CUDA Radix Sort (Thrust Library)</title>
+  <type>exe</type>
+  <whitepaper>doc\readme.txt</whitepaper>
+</entry>

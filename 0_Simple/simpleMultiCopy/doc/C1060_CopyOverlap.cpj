@@ -1,0 +1,12 @@
+<!DOCTYPE cpj>
+<cpj version="1.2" >
+ <session>
+  <name>Session1</name>
+  <datetime>05 Feb 2010 12:20:58</datetime>
+  <normalizedcounter>false</normalizedcounter>
+  <device multProcessorCount="30" warpSize="32" textureAlignment="256" maxRegPerBlock="16384" computeCapability="1.3" maxThreadPerBlock="512" totalConstMem="65536" maxGridDim="65535 65535" maxShareMemPerBlock="16384" id="0" maxBlockDim="512 512 64" GpuOverlap="1" name="Tesla C1060" label="Device_0" clockFreq="1296000" maxPitchMem="2147483647" >
+   <context totalcountercount="0" invalidcountercount="0" id="0" label="Context_0" truncatedcountercount="0" />
+  </device>
+ </session>
+</cpj>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE entry SYSTEM "SamplesInfo.dtd">
+<entry>
+  <name>simpleCUFFT_callback</name>
+  <cflags>
+    <flag>-dc</flag>
+  </cflags>
+  <description><![CDATA[Example of using CUFFT. In this example, CUFFT is used to compute the 1D-convolution of some signal with some filter by transforming both into frequency domain, multiplying them together, and transforming the signal back to time domain. The difference between this example and the Simple CUFFT example is that the multiplication step is done by the CUFFT kernel with a user-supplied CUFFT callback routine, rather than by a separate kernel call.]]></description>
+  <devicecompilation>separate</devicecompilation>
+  <includepaths>
+    <path>./</path>
+    <path>../</path>
+    <path>../../common/inc</path>
+  </includepaths>
+  <keyconcepts>
+    <concept level="basic">Image Processing</concept>
+    <concept level="basic">CUFFT Library</concept>
+  </keyconcepts>
+  <keywords>
+    <keyword>CUDA</keyword>
+    <keyword>CUFFT</keyword>
+  </keywords>
+  <libraries>
+    <library>cufft_static</library>
+    <library>culibos</library>
+  </libraries>
+  <librarypaths>
+  </librarypaths>
+  <nsight_eclipse>true</nsight_eclipse>
+  <primary_file>simpleCUFFT_callback.cu</primary_file>
+  <required_dependencies>
+    <dependency>callback</dependency>
+    <dependency>CUFFT</dependency>
+  </required_dependencies>
+  <scopes>
+    <scope>1:CUDA Basic Topics</scope>
+    <scope>2:Image Processing</scope>
+  </scopes>
+  <sm-arch>sm20</sm-arch>
+  <sm-arch>sm30</sm-arch>
+  <sm-arch>sm35</sm-arch>
+  <sm-arch>sm50</sm-arch>
+  <sm-arch>sm52</sm-arch>
+  <supported_envs>
+    <env>
+      <arch>x86_64</arch>
+      <platform>linux</platform>
+    </env>
+    <env>
+      <arch>x86_64</arch>
+      <platform>mac</platform>
+    </env>
+    <env>
+      <arch>ppc64le</arch>
+      <platform>linux</platform>
+    </env>
+  </supported_envs>
+  <supported_sm_architectures>
+    <exclude>3.7</exclude>
+    <include>all</include>
+  </supported_sm_architectures>
+  <title>Simple CUFFT Callbacks</title>
+  <type>exe</type>
+</entry>
